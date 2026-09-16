@@ -156,17 +156,21 @@
     </div>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-[100vh] flex items-end md:items-center px-6 md:px-8 pt-32 pb-20 md:pt-20 md:pb-0 overflow-hidden z-10">
-        <div class="absolute inset-0 z-0">
-            <!-- Increased brightness filter so the image looks vivid -->
-            <img src="landscape.jpg" alt="Background Header" class="w-full h-full object-cover object-top md:object-[75%_30%] filter grayscale brightness-125 contrast-110">
-            
-            <!-- Lighter mobile gradient that fades out quickly so the top image stays bright -->
-            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 md:via-[#050505]/70 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-[#050505]/20 md:from-[#050505] via-transparent to-[#050505]/20 md:to-[#050505]/90"></div>
+    <section id="home" class="relative min-h-[100vh] flex items-center px-6 md:px-8 pt-28 pb-16 md:pt-20 md:pb-0 overflow-hidden z-10">
+        <!-- Desktop Background Image (Hidden on mobile, pristine on desktop) -->
+        <div class="hidden md:block absolute inset-0 z-0 opacity-80">
+            <img src="landscape.jpg" alt="Background Header" class="w-full h-full object-cover object-[75%_30%] filter grayscale">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-[#050505]/90"></div>
         </div>
 
         <div class="max-w-7xl mx-auto w-full relative z-10">
+            <!-- Mobile Image Card (Only shows on mobile screens, hidden on desktop) -->
+            <div class="md:hidden w-full h-[280px] rounded-2xl overflow-hidden border border-white/10 mb-8 shadow-2xl relative">
+                <img src="landscape.jpg" alt="Deepak Rawat" class="w-full h-full object-cover object-[75%_30%] filter grayscale">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent"></div>
+            </div>
+
             <p class="text-[#FFD700] font-mono-custom text-xs tracking-widest uppercase mb-6 flex items-center gap-2 reveal-up" style="transition-delay: 0.1s;">
                 <span class="w-2 h-2 bg-[#FFD700] rounded-full inline-block animate-pulse"></span>
                 OPEN TO OPPORTUNITIES
